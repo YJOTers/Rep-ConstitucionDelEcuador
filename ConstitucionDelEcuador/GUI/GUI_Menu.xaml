@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConstitucionDelEcuador.GUI.GUI_Menu"
+             Title="MENU">
+    <ContentPage.Content>
+        <StackLayout Spacing="10" Padding="10" VerticalOptions="Center" BackgroundColor="White">
+            <Button Text="INICIO" WidthRequest="240" HeightRequest="60" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="30"
+                        TextColor="White" BackgroundColor="Blue" FontSize="16" Clicked="MetodoInicio" />
+            <Button Text="ACERCA DE" WidthRequest="240" HeightRequest="60" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="30"
+                        TextColor="White" BackgroundColor="Blue" FontSize="16" Clicked="MetodoAcercaDe" />
+            <Button Text="CONTACTO" WidthRequest="240" HeightRequest="60" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="30"
+                        TextColor="White" BackgroundColor="Blue" FontSize="16" Clicked="MetodoContacto" />
+            <Button Text="RESUMEN" WidthRequest="240" HeightRequest="60" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="30"
+                        TextColor="White" BackgroundColor="Blue" FontSize="16" Clicked="MetodoResumen" />
+            <Button Text="LEER CONSTITUCIÓN" WidthRequest="240" HeightRequest="60" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="30"
+                        TextColor="White" BackgroundColor="Blue" FontSize="16" Clicked="MetodoConstitucion" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

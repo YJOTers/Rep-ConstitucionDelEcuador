@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:control="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
+             x:Class="ConstitucionDelEcuador.GUI.GUI_Constitucion"
+             Title="CONSTITUCIÓN DEL ECUADOR">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <control:MTAdView x:Name="Banner" AdsId="ca-app-pub-6065188311356970/4045278952" WidthRequest="320" HeightRequest="60"/>
+            <Entry x:Name="BuscarArticulo" Placeholder="N# de artículo" Keyboard="Numeric" Margin="10, 0, 10, 0" TextChanged="BuscarArticulo_TextChanged"/>
+            <ScrollView Orientation="Vertical" Margin="10, 0, 10, 0">
+                <ListView x:Name="ListaArticulos" HasUnevenRows="True">
+                    <ListView.Header>
+                        <StackLayout>
+                            <Label Text="Lista de articulos" HorizontalTextAlignment="Center" FontSize="Title"/>
+                        </StackLayout>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="0, 10, 0, 10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="38"/>
+                                        <ColumnDefinition Width="62*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding cod_art}" FontSize="Subtitle" FontAttributes="Bold" Grid.Column="0"/>
+                                    <Label Text="{Binding descripcion_art}" FontSize="Subtitle" Grid.Column="1"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
